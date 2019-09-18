@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: transparent;
+}
+$body-background-color: transparent;
+@import '~bulma';
+body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+.headerText {
+  color: white;
+}
+ .has-background {
+   background-color: rgba(0, 0, 0, 0.5);
+ }
