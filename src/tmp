@@ -1,0 +1,54 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Parallax from 'react-springy-parallax'
+import ReactPageScroller from "react-page-scroller"
+
+import './style.scss'
+
+
+class App extends React.Component {
+
+  constructor(props) {
+        super(props);
+        this.state = {currentPage: 1};
+        this._pageScroller = null;
+        this.pageOnChange = this.pageOnChange.bind(this)
+    }
+
+    goToPage(eventKey){
+        this._pageScroller.goToPage(eventKey);
+    };
+
+    pageOnChange(number) {
+        this.setState({currentPage: number});
+    };
+
+
+
+    render() {
+
+        return <React.Fragment>
+
+            <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
+              <div className="component first-component">
+                <h2>First Component</h2>
+              </div>
+              <div className="component first-component">
+                <h2>First Component</h2>
+              </div>
+              <div className="component first-component">
+                <h2>First Component</h2>
+              </div>
+              <div className="component first-component">
+                <h2>First Component</h2>
+              </div>
+            </ReactPageScroller>
+
+        </React.Fragment>
+    }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)
