@@ -16,19 +16,30 @@ class App extends React.Component {
   constructor(props) {
       super(props)
 
-      this.state = {}
+      this.state = {
+        hoveredElement: ""
+      }
 
       this.handleScroll = this.handleScroll.bind(this)
+      this.handleHover = this.handleHover.bind(this)
+      this.doNothing = this.doNothing.bind(this)
+  }
+
+  handleHover(e){
+    this.setState({ hoveredElement: e.target.id })
+    console.log(event.clientX)
   }
 
   handleScroll() {
-      this.setState({scroll: window.scrollY})
+      this.setState({ scroll: window.scrollY })
   }
 
   componentDidMount() {
         const el = document.querySelector('nav')
-        this.setState({top: el.offsetTop, height: el.offsetHeight})
+
+        this.setState({ top: el.offsetTop, height: el.offsetHeight })
         window.addEventListener('scroll', this.handleScroll)
+
     }
 
   componentDidUpdate() {
@@ -36,6 +47,10 @@ class App extends React.Component {
             document.body.style.paddingTop = `${this.state.height}px` :
             document.body.style.paddingTop = 0
     }
+
+  doNothing() {
+    const x = "1"
+  }
 
   render(){
       return (
@@ -45,7 +60,7 @@ class App extends React.Component {
             <source src="https://svetlana-portfolio.s3-eu-west-1.amazonaws.com/bg_video.mp4" type="video/mp4" />
           </video>
 
-          <div className="full-screen home section" id="home">
+          <div className="full-screen home section" id="home" onMouseEnter={this.state.hoveredElement === "home" ? this.doNothing : this.handleHover}>
             <div className="">
               <Animated animationIn="fadeIn" animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
                 <h1 className="title is-size-1 has-text-light header-text">Hello </h1>
@@ -74,19 +89,22 @@ class App extends React.Component {
 
           <nav id="nav" className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
             <ul>
-              <li><AnchorLink href="#home">Home</AnchorLink></li>
-              <li><AnchorLink href="#about">About</AnchorLink></li>
-              <li><AnchorLink href="#portfolio">Portfolio</AnchorLink></li>
-              <li><AnchorLink href="#contact">Contact</AnchorLink></li>
+              <AnchorLink href="#home" className={this.state.hoveredElement === "home" ? "hoveredElement" : "navitem"} >Home</AnchorLink>
+              <AnchorLink href="#about" className={this.state.hoveredElement === "about" ? "hoveredElement" : "navitem"}>About</AnchorLink>
+              <AnchorLink href="#portfolio" className={this.state.hoveredElement === "portfolio" ? "hoveredElement" : "navitem"}>Portfolio</AnchorLink>
+              <AnchorLink href="#contact" className={this.state.hoveredElement === "contact" ? "hoveredElement" : "navitem"}>Contact</AnchorLink>
             </ul>
           </nav>
 
-          <div className="full-screen about" id="about">
+          <div className="full-screen about" id="about" onMouseEnter={this.state.hoveredElement === "about" ? this.doNothing : this.handleHover}>
             <ScrollAnimation animateIn="flipInY" animateOnce={true}>
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
           </div>
-          <div className="full-screen">
+          <div className="full-screen about" id="portfolio" onMouseEnter={this.state.hoveredElement === "portfolio" ? this.doNothing : this.handleHover}>
+            <h1 className="title is-2" >LANA KIR</h1>
+          </div>
+          <div className="full-screen about" id="contact" onMouseEnter={this.state.hoveredElement === "contact" ? this.doNothing : this.handleHover}>
             <h1 className="title is-2">LANA KIR</h1>
           </div>
         </div>
