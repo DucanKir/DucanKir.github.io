@@ -23,11 +23,12 @@ class App extends React.Component {
       this.handleScroll = this.handleScroll.bind(this)
       this.handleHover = this.handleHover.bind(this)
       this.doNothing = this.doNothing.bind(this)
+      this.goToTop = this.goToTop.bind(this)
   }
 
   handleHover(e){
     this.setState({ hoveredElement: e.target.id })
-    console.log(event.clientX)
+
   }
 
   handleScroll() {
@@ -52,15 +53,22 @@ class App extends React.Component {
     const x = "1"
   }
 
+  goToTop(){
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+    })
+  }
+
   render(){
       return (
         <div className="">
 
-          <video  className="backgroundVideo" autoPlay muted loop>
+          <video id="home" className="backgroundVideo" autoPlay muted loop>
             <source src="https://svetlana-portfolio.s3-eu-west-1.amazonaws.com/bg_video.mp4" type="video/mp4" />
           </video>
 
-          <div className="full-screen home section" id="home" onMouseEnter={this.state.hoveredElement === "home" ? this.doNothing : this.handleHover}>
+          <div className="full-screen home section"  onMouseEnter={this.state.hoveredElement === "home" ? this.doNothing : this.handleHover}>
             <div className="">
               <Animated animationIn="fadeIn" animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
                 <h1 className="title is-size-1 has-text-light header-text">Hello </h1>
@@ -89,7 +97,7 @@ class App extends React.Component {
 
           <nav id="nav" className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
             <ul>
-              <AnchorLink href="#home" className={this.state.hoveredElement === "home" ? "hoveredElement" : "navitem"} >Home</AnchorLink>
+              <a onClick={this.goToTop} className={this.state.hoveredElement === "home" ? "hoveredElement" : "navitem"} >Home</a>
               <AnchorLink href="#about" className={this.state.hoveredElement === "about" ? "hoveredElement" : "navitem"}>About</AnchorLink>
               <AnchorLink href="#portfolio" className={this.state.hoveredElement === "portfolio" ? "hoveredElement" : "navitem"}>Portfolio</AnchorLink>
               <AnchorLink href="#contact" className={this.state.hoveredElement === "contact" ? "hoveredElement" : "navitem"}>Contact</AnchorLink>
