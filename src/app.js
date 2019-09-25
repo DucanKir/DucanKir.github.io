@@ -21,7 +21,8 @@ class App extends React.Component {
         homeHeight: 0,
         aboutHeight: 0,
         portfolioHeight: 0,
-        aboutHeight: 0
+        aboutHeight: 0,
+        scroll: 0
       }
 
       this.handleScroll = this.handleScroll.bind(this)

@@ -16,10 +16,7 @@ body {
   margin: 0;
   width:100%;
   overflow-x:hidden;
-
 }
-
-
 
 .full-screen {
   min-height: -webkit-fill-available;
@@ -95,10 +92,6 @@ video {
   }
 }
 
-.z-index-1 {
-  z-index: 5;
-}
-
 .arrow {
   position: absolute;
   color: #035efc;
@@ -114,6 +107,7 @@ nav {
   color: white;
   z-index: 2;
 }
+
 
 ul {
   list-style: none;
