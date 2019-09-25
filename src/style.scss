@@ -10,7 +10,9 @@ $body-background-color: transparent;
 $light: #d2e9e3;
 $family-primary: 'Julius Sans One', sans-serif;
 $link: white;
-
+h1 {
+  font-size: 3rem !important;
+}
 @import '~bulma';
 body {
   margin: 0;
@@ -66,30 +68,10 @@ video {
   background-color: #cf3c47;
 }
 
-@media screen and (max-width: 600px) {
-  .home {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    background-color: #040608;
-  }
-}
 
-@media screen and (max-width: 300px) {
-  .home {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    background-color: #040608;
-  }
-
-  .backgroundVideo {
-    width:100%;
-    position: relative;
-
-  }
+.backgroundVideo {
+  width:100%;
+  position: relative;
 }
 
 .arrow {
@@ -112,6 +94,7 @@ nav {
 ul {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -154,4 +137,39 @@ ul {
 
 .fixed-nav {
   position: fixed;
+}
+
+
+
+
+@media only screen and (orientation: portrait) {
+  h1 {
+    font-size: 5rem !important;
+  }
+  .h1 {
+    font-size: 5rem !important;
+  }
+  .h3 {
+    font-size: 3rem !important;
+  }
+  .arrow {
+    font-size: 5em;
+  }
+
+  nav {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navitem {
+    font-size: 2.5rem;
+    height: 150px;
+  }
+  .hoveredElement {
+    height: 150px;
+    font-size: 2.5rem;
+  }
+
+
 }

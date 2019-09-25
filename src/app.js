@@ -84,18 +84,18 @@ class App extends React.Component {
             id="home">
             <div className="">
               <Animated animationIn="fadeIn" animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
-                <h1 className="title is-size-1 has-text-light header-text">Hello </h1>
+                <h1 className="title  has-text-light header-text">Hello </h1>
               </Animated>
 
               <Animated animationIn="fadeInUp" animationInDuration={3000} animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
-              <h1 className="title is-size-1 has-text-dark header-text">
-                <span className="title is-size-1 has-text-light header-text has-text-weight-bold">I'm </span>
+              <h1 className="title has-text-dark header-text">
+                <span className="title has-text-light header-text has-text-weight-bold h1">I'm </span>
                 Lana Kirilenko
               </h1>
               </Animated>
 
               <Animated animationIn="fadeInRight" animationOut="fadeOut" animationInDelay={2000} animationInDuration={3000} isVisible={true}>
-                <div className="has-text-light subtitle is-3">
+                <div className="has-text-light subtitle is-3 h3">
                 Full-stack web developer
                 </div>
               </Animated>
