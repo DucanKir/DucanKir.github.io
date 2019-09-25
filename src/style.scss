@@ -13,21 +13,28 @@ $link: white;
 
 @import '~bulma';
 body {
-  height: 100%;
   margin: 0;
+  width:100%;
+  overflow-x:hidden;
 }
 
 
 
 .full-screen {
-  height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100vw;
 }
 
 .backgroundVideo {
-  width:100%;
+  width: 100%;
+  height: auto;
   position: absolute;
 }
+
+video {
+  width: 100%;
+}
+
 .home {
   display: flex;
   align-items: center;
@@ -89,7 +96,7 @@ body {
 }
 
 nav {
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0 50px 0 50px;
   top: 0;

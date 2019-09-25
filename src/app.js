@@ -17,41 +17,40 @@ class App extends React.Component {
       super(props)
 
       this.state = {
-        hoveredElement: ""
+        hoveredElement: "",
+        homeHeight: 0,
+        aboutHeight: 0,
+        portfolioHeight: 0,
+        aboutHeight: 0
       }
 
       this.handleScroll = this.handleScroll.bind(this)
-      this.handleHover = this.handleHover.bind(this)
-      this.doNothing = this.doNothing.bind(this)
       this.goToTop = this.goToTop.bind(this)
-  }
-
-  handleHover(e){
-    this.setState({ hoveredElement: e.target.id })
-
   }
 
   handleScroll() {
       this.setState({ scroll: window.scrollY })
+
   }
 
   componentDidMount() {
         const el = document.querySelector('nav')
-
-        this.setState({ top: el.offsetTop, height: el.offsetHeight })
+        this.setState({
+          top: this.refs.home.clientHeight,
+          homeHeight: this.refs.home.clientHeight,
+          aboutHeight: this.refs.about.clientHeight,
+          portfolioHeight: this.refs.portfolio.clientHeight,
+          aboutHeight: this.refs.about.clientHeight
+         })
         window.addEventListener('scroll', this.handleScroll)
 
     }
 
-  componentDidUpdate() {
-        this.state.scroll > this.state.top ?
-            document.body.style.paddingTop = `${this.state.height}px` :
-            document.body.style.paddingTop = 0
-    }
-
-  doNothing() {
-    const x = "1"
-  }
+  // componentDidUpdate() {
+  //       this.state.scroll > this.state.top ?
+  //           document.body.style.paddingTop = `${this.state.height}px` :
+  //           document.body.style.paddingTop = 0
+  //   }
 
   goToTop(){
     window.scrollTo({
@@ -60,15 +59,26 @@ class App extends React.Component {
     })
   }
 
+
   render(){
+      const homeheight = this.state.homeHeight
+      const aboutheight = this.state.aboutHeight
+      const portfolioheight = this.state.portfolioHeight
+      const contactheight = this.state.contactHeight
+      const bodyheight = homeheight + aboutheight + portfolioheight + contactheight
+
       return (
         <div className="">
 
-          <video id="home" className="backgroundVideo" autoPlay muted loop>
+          <video  className="backgroundVideo" autoPlay muted loop>
             <source src="https://svetlana-portfolio.s3-eu-west-1.amazonaws.com/bg_video.mp4" type="video/mp4" />
           </video>
 
-          <div className="full-screen home section"  onMouseEnter={this.state.hoveredElement === "home" ? this.doNothing : this.handleHover}>
+          <div
+            className='home section'
+            style={{height: window.innerHeight}}
+            ref="home"
+            id="home">
             <div className="">
               <Animated animationIn="fadeIn" animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
                 <h1 className="title is-size-1 has-text-light header-text">Hello </h1>
@@ -97,22 +107,38 @@ class App extends React.Component {
 
           <nav id="nav" className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
             <ul>
-              <a onClick={this.goToTop} className={this.state.hoveredElement === "home" ? "hoveredElement" : "navitem"} >Home</a>
-              <AnchorLink href="#about" className={this.state.hoveredElement === "about" ? "hoveredElement" : "navitem"}>About</AnchorLink>
-              <AnchorLink href="#portfolio" className={this.state.hoveredElement === "portfolio" ? "hoveredElement" : "navitem"}>Portfolio</AnchorLink>
-              <AnchorLink href="#contact" className={this.state.hoveredElement === "contact" ? "hoveredElement" : "navitem"}>Contact</AnchorLink>
+              <a onClick={this.goToTop}
+                className={this.state.scroll < homeheight/3*2 ? "hoveredElement" : "navitem"} >Home</a>
+              <AnchorLink href="#about"
+                className={this.state.scroll > homeheight/3*2 && this.state.scroll < homeheight+aboutheight/3*2 ? "hoveredElement" : "navitem"}>About</AnchorLink>
+              <AnchorLink href="#portfolio"
+                className={this.state.scroll > homeheight+aboutheight/3*2 && this.state.scroll < homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"}>Portfolio</AnchorLink>
+              <AnchorLink href="#contact"
+                className={this.state.scroll > homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"}>Contact</AnchorLink>
             </ul>
           </nav>
 
-          <div className="full-screen about" id="about" onMouseEnter={this.state.hoveredElement === "about" ? this.doNothing : this.handleHover}>
+          <div
+            className="about"
+            style={{height: window.innerHeight}}
+            id="about"
+            ref="about">
             <ScrollAnimation animateIn="flipInY" animateOnce={true}>
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
           </div>
-          <div className="full-screen about" id="portfolio" onMouseEnter={this.state.hoveredElement === "portfolio" ? this.doNothing : this.handleHover}>
+          <div
+            className="about"
+            style={{height: window.innerHeight}}
+            id="portfolio"
+            ref="portfolio">
             <h1 className="title is-2" >LANA KIR</h1>
           </div>
-          <div className="full-screen about" id="contact" onMouseEnter={this.state.hoveredElement === "contact" ? this.doNothing : this.handleHover}>
+          <div
+            className="about"
+            style={{height: window.innerHeight}}
+            id="contact"
+            ref="contact">
             <h1 className="title is-2">LANA KIR</h1>
           </div>
         </div>
