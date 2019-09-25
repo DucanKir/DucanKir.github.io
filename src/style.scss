@@ -9,6 +9,8 @@ html {
 $body-background-color: transparent;
 $light: #d2e9e3;
 $family-primary: 'Julius Sans One', sans-serif;
+$link: white;
+
 @import '~bulma';
 body {
   height: 100%;
@@ -73,4 +75,53 @@ body {
     width:100%;
     position: relative;
   }
+}
+
+.z-index-1 {
+  z-index: 5;
+}
+
+.arrow {
+  position: absolute;
+  top: 75%;
+  color: #035efc;
+  font-size: 3em;
+}
+
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0 50px 0 50px;
+  top: 0;
+  background-color: #cf3c47;
+  color: white;
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #848484;
+  color: #212121;
+}
+
+.fixed-nav {
+  position: fixed;
 }
