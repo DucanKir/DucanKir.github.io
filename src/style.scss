@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Julius+Sans+One&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -6,11 +8,14 @@ html {
 }
 $body-background-color: transparent;
 $light: #d2e9e3;
+$family-primary: 'Julius Sans One', sans-serif;
 @import '~bulma';
 body {
   height: 100%;
   margin: 0;
 }
+
+
 
 .full-screen {
   height: 100vh;
@@ -19,13 +24,53 @@ body {
 
 .backgroundVideo {
   width:100%;
-
   position: absolute;
-
 }
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #040608;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.raw {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav {
+  background-color: #cf3c47;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #040608;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #040608;
+  }
+
+  .backgroundVideo {
+    width:100%;
+    position: relative;
+  }
 }
