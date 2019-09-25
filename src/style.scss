@@ -16,6 +16,7 @@ body {
   margin: 0;
   width:100%;
   overflow-x:hidden;
+
 }
 
 
@@ -27,8 +28,16 @@ body {
 
 .backgroundVideo {
   width: 100%;
-  height: auto;
   position: absolute;
+
+
+}
+
+.videoContainer {
+  overflow: hidden;
+  width:100%;
+  position: absolute;
+
 }
 
 video {
@@ -48,6 +57,7 @@ video {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .raw {
@@ -81,6 +91,7 @@ video {
   .backgroundVideo {
     width:100%;
     position: relative;
+
   }
 }
 
@@ -90,7 +101,6 @@ video {
 
 .arrow {
   position: absolute;
-  top: 75%;
   color: #035efc;
   font-size: 3em;
 }
@@ -102,7 +112,7 @@ nav {
   top: 0;
   background-color: #cf3c47;
   color: white;
-  z-index: 1;
+  z-index: 2;
 }
 
 ul {

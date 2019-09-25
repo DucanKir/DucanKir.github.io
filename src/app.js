@@ -70,9 +70,11 @@ class App extends React.Component {
       return (
         <div className="">
 
-          <video  className="backgroundVideo" autoPlay muted loop>
-            <source src="https://svetlana-portfolio.s3-eu-west-1.amazonaws.com/bg_video.mp4" type="video/mp4" />
-          </video>
+          <div className="videoContainer" style={{height: window.innerHeight}}>
+            <video  className="backgroundVideo" autoPlay muted loop>
+              <source src="https://svetlana-portfolio.s3-eu-west-1.amazonaws.com/bg_video.mp4" type="video/mp4" />
+            </video>
+          </div>
 
           <div
             className='home section'
@@ -98,8 +100,7 @@ class App extends React.Component {
               </Animated>
             </div>
             <div>
-              <Animated className="has-text-centered arrow" animationIn="fadeInUp" animationOut="fadeOut" animationInDelay={2500} animationInDuration={3000} isVisible={true}>
-                <br />
+              <Animated className="has-text-centered arrow" animationIn="fadeInUp" animationOut="fadeOut" animationInDelay={2500} animationInDuration={3000} isVisible={true} style={{top: window.innerHeight*0.75}}>
                 <AnchorLink href="#nav" className="fas fa-chevron-down"></AnchorLink>
               </Animated>
             </div>
