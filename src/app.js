@@ -80,7 +80,7 @@ class App extends React.Component {
 
           <div
             className='home section'
-            style={{height: window.innerHeight}}
+            style={{minHeight: window.innerHeight}}
             ref="home"
             id="home">
             <div className="">
