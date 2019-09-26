@@ -158,7 +158,7 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="contact"
             ref="contact">
-            <form name="contact" method="post">
+            <form name="contact" method="post" action="/">
               <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label>Your Name: <input type="text" name="name"/></label>
