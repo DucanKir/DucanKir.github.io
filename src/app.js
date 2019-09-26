@@ -38,6 +38,7 @@ class App extends React.Component {
         const el = document.querySelector('nav')
         this.setState({
           top: this.refs.home.clientHeight,
+          height: el.offsetHeight,
           homeHeight: this.refs.home.clientHeight,
           aboutHeight: this.refs.about.clientHeight,
           portfolioHeight: this.refs.portfolio.clientHeight,
@@ -47,11 +48,11 @@ class App extends React.Component {
 
     }
 
-  // componentDidUpdate() {
-  //       this.state.scroll > this.state.top ?
-  //           document.body.style.paddingTop = `${this.state.height}px` :
-  //           document.body.style.paddingTop = 0
-  //   }
+  componentDidUpdate() {
+        this.state.scroll > this.state.top ?
+            document.body.style.paddingTop = `${this.state.height}px` :
+            document.body.style.paddingTop = 0
+    }
 
   goToTop(){
     window.scrollTo({

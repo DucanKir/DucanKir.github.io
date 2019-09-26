@@ -83,7 +83,6 @@ video {
 nav {
   width: 100vw;
   margin: 0;
-  padding: 0 50px 0 50px;
   top: 0;
   background-color: #cf3c47;
   color: white;
@@ -158,9 +157,8 @@ ul {
 
   nav {
     height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
   }
   .navitem {
     font-size: 2.5rem;
@@ -169,6 +167,10 @@ ul {
   .hoveredElement {
     height: 150px;
     font-size: 2.5rem;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
   }
 
 
