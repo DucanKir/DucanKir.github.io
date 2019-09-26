@@ -158,30 +158,20 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="contact"
             ref="contact">
-            <form
-              name="contact"
-              method="post"
-              action="/success"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="bot-field" />
-              <div>
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div>
-                <label htmlFor="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div>
-                <label htmlFor="message">Message</label>
-                <textarea name="message" id="message" rows="6" required />
-              </div>
-              <div>
-                <input type="submit" value="Drop a line" />
-                <input type="reset" value="Eraser" />
-              </div>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label>Your Name: <input type="text" name="name"/></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email"/></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
             </form>
           </div>
         </div>
