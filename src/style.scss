@@ -6,12 +6,12 @@
 html {
   background-color: transparent;
   overflow: hidden;
-  transition: all 9999999s ease-in;
 }
 $body-background-color: transparent;
 $light: #d2e9e3;
 $family-primary: 'Julius Sans One', sans-serif;
 $link: white;
+
 h1 {
   font-size: 3rem !important;
 }
@@ -20,14 +20,6 @@ body {
   margin: 0;
   width:100%;
   overflow-x:hidden;
-  overflow-y: scroll;
-   -webkit-overflow-scrolling:touch;
-
-}
-
-.full-screen {
-  min-height: -webkit-fill-available;
-  width: 100vw;
 }
 
 .backgroundVideo {
@@ -54,6 +46,7 @@ video {
   justify-content: center;
   flex-direction: column;
   background-color: #040608;
+  transition: all 999999s ease-in;
 }
 
 .about {
@@ -68,11 +61,6 @@ video {
   display: flex;
   align-items: flex-end;
 }
-
-.nav {
-  background-color: #cf3c47;
-}
-
 
 .backgroundVideo {
   width:100%;
