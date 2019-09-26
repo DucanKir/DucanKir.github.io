@@ -22,11 +22,13 @@ class App extends React.Component {
         aboutHeight: 0,
         portfolioHeight: 0,
         aboutHeight: 0,
-        scroll: 0
+        scroll: 0,
+        windowHeight: window.innerHeight
       }
 
       this.handleScroll = this.handleScroll.bind(this)
       this.goToTop = this.goToTop.bind(this)
+      this.updateHeight = this.updateHeight.bind(this)
   }
 
   handleScroll() {
@@ -35,24 +37,40 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-        const el = document.querySelector('nav')
-        this.setState({
-          top: this.refs.home.clientHeight,
-          height: el.offsetHeight,
-          homeHeight: this.refs.home.clientHeight,
-          aboutHeight: this.refs.about.clientHeight,
-          portfolioHeight: this.refs.portfolio.clientHeight,
-          aboutHeight: this.refs.about.clientHeight
-         })
-        window.addEventListener('scroll', this.handleScroll)
 
-    }
+    this.updateHeight()
+     window.addEventListener("resize", this.updateHeight)
 
-  componentDidUpdate() {
-        this.state.scroll > this.state.top ?
-            document.body.style.paddingTop = `${this.state.height}px` :
-            document.body.style.paddingTop = 0
-    }
+    const el = document.querySelector('nav')
+    this.setState({
+      top: this.refs.home.clientHeight,
+      height: el.offsetHeight,
+      homeHeight: this.refs.home.clientHeight,
+      aboutHeight: this.refs.about.clientHeight,
+      portfolioHeight: this.refs.portfolio.clientHeight,
+      aboutHeight: this.refs.about.clientHeight
+     })
+    window.addEventListener('scroll', this.handleScroll)
+
+  }
+
+  componentWillUnmount() {
+   window.removeEventListener("resize", this.updateHeight)
+ }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.updateHeight()
+    this.state.scroll > this.state.top ?
+        document.body.style.paddingTop = `${this.state.height}px` :
+        document.body.style.paddingTop = 0
+
+    console.log(this.refs.home.clientHeight, prevState.top)
+  }
+
+  updateHeight() {
+   if (this.state.top != this.refs.home.clientHeight)
+     this.setState({ top: this.refs.home.clientHeight })
+  }
 
   goToTop(){
     window.scrollTo({
