@@ -23,17 +23,22 @@ class App extends React.Component {
         portfolioHeight: 0,
         aboutHeight: 0,
         scroll: 0,
-        windowHeight: window.innerHeight
+        windowHeight: window.innerHeight,
+        progressPosition: '0vw'
       }
 
       this.handleScroll = this.handleScroll.bind(this)
       this.goToTop = this.goToTop.bind(this)
       this.updateHeight = this.updateHeight.bind(this)
+      this.getProgressPosition = this.getProgressPosition.bind(this)
+      this.flat_hex_to_pixel = this.flat_hex_to_pixel.bind(this)
+      this.getCoordinatesWithIcons = this.getCoordinatesWithIcons.bind(this)
+      this.setTiles = this.setTiles.bind(this)
   }
 
   handleScroll() {
       this.setState({ scroll: window.scrollY })
-
+      this.getProgressPosition()
   }
 
   componentDidMount() {
@@ -63,6 +68,7 @@ class App extends React.Component {
     this.state.scroll > this.state.top ?
         document.body.style.paddingTop = `${this.state.height}px` :
         document.body.style.paddingTop = 0
+
   }
 
   updateHeight() {
@@ -77,6 +83,63 @@ class App extends React.Component {
     })
   }
 
+  getProgressPosition(){
+    if(this.state.scroll < this.state.homeHeight/3*2) {
+      this.setState({ progressPosition: "0vw" })
+    } else if(this.state.scroll > this.state.homeHeight/3*2 && this.state.scroll < this.state.homeHeight+this.state.aboutHeight/3*2) {
+      this.setState({ progressPosition: "25vw" })
+    } else if(this.state.homeHeight+this.state.aboutHeight/3*2 && this.state.scroll < this.state.homeHeight+this.state.aboutHeight+this.state.portfolioHeight/3*2){
+      this.setState({ progressPosition: "50vw" })
+    } else {
+      this.setState({ progressPosition: "75vw" })
+    }
+  }
+
+  flat_hex_to_pixel(q, r) {
+    var x = 60 * (3./2 * q)
+    var y = 60 * (Math.sqrt(3)/2 * q + Math.sqrt(3) * r)
+    return [x, y]
+  }
+
+  getCoordinatesWithIcons(icons, coord){
+    const result =[]
+    let delay = 0
+    for(let i=0; i<icons.length; i++){
+      let twoCoord = this.flat_hex_to_pixel(coord[i][0], coord[i][1])
+      twoCoord.push(icons[i])
+      twoCoord.push(delay)
+      delay+=100
+      result.push(twoCoord)
+
+    }
+    console.log(result)
+    return result
+  }
+
+  setTiles() {
+    const listOfIcons = ["devicon-javascript-plain  icond", "devicon-react-original  icond", "devicon-nodejs-plain  icond", "devicon-python-plain  icond", "devicon-django-plain  icond", "devicon-html5-plain  icond", "devicon-css3-plain  icond", "devicon-express-original  icond", "devicon-postgresql-plain  icond", "devicon-mongodb-plain  icond", "devicon-babel-plain  icond", "devicon-sass-original  icond", "devicon-git-plain  icond", "devicon-github-plain  icond", "devicon-photoshop-plain  icond", "devicon-illustrator-plain  icond", "devicon-webpack-plain  icond"]
+
+    const listOfPCoordinates= [[0,0],[0,1],[0,2],[1,-1],[1,0],[1,1],[1,2],[2,-2],[2,-1],[2,0],[2,1],[2,2],[3,-2],[3,-1],[3,0],[3,1],[4,-2],[4,-1],[4,0]]
+
+    const targetList = this.getCoordinatesWithIcons(listOfIcons, listOfPCoordinates)
+
+    return (
+      <div style={{position: "relative"}}>
+        {targetList.map(item =>
+          <ScrollAnimation
+            key={item[2]}
+            style={{top:item[0], left:item[1], position: "absolute"}}
+            animateIn="flipInX"
+            animateOnce={true}
+            delay={+(item[3])}>
+          <div className="iconContainer">
+          <i className={item[2]}></i>
+          </div>
+          </ScrollAnimation>
+        )}
+      </div>
+    )
+  }
 
   render(){
       const homeheight = this.state.homeHeight
@@ -125,15 +188,16 @@ class App extends React.Component {
           </div>
 
           <nav id="nav" className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
+            <div className="progressNav" style={{left: this.state.progressPosition}}></div>
             <ul>
               <a onClick={this.goToTop}
-                className={`${this.state.scroll < homeheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`} >Home</a>
+                className="has-text-weight-bold is-one-quater navitem" >Home</a>
               <AnchorLink href="#about"
-                className={`${this.state.scroll > homeheight/3*2 && this.state.scroll < homeheight+aboutheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>About</AnchorLink>
+                className="has-text-weight-bold is-one-quater navitem">About</AnchorLink>
               <AnchorLink href="#portfolio"
-                className={`${this.state.scroll > homeheight+aboutheight/3*2 && this.state.scroll < homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>Portfolio</AnchorLink>
+                className="has-text-weight-bold is-one-quater navitem">Portfolio</AnchorLink>
               <AnchorLink href="#contact"
-                className={`${this.state.scroll > homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>Contact</AnchorLink>
+                className="has-text-weight-bold is-one-quater navitem">Contact</AnchorLink>
             </ul>
           </nav>
 
@@ -146,32 +210,34 @@ class App extends React.Component {
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
           </div>
+
           <div
             className="portfolio"
             style={{height: window.innerHeight}}
             id="portfolio"
             ref="portfolio">
-            <h1 className="title is-2" >LANA KIR</h1>
+            {this.setTiles()}
           </div>
+
           <div
-            className="about"
+            className="contact"
             style={{height: window.innerHeight}}
             id="contact"
             ref="contact">
             <form name="contact" method="post" action="/">
               <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <label>Your Name: <input type="text" name="name"/></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email"/></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
+              <div className="inputField">
+                <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
+              </div>
+              <div className="inputField">
+                <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
+              </div>
+              <div className="inputField">
+                <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
+              </div>
+              <div className="">
+                <button className="button is-info" type="submit">Send</button>
+              </div>
             </form>
           </div>
         </div>

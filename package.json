@@ -35,6 +35,9 @@
     "react-animated-css": "^1.2.1",
     "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
+    "react-flipcard": "^0.2.1",
+    "react-flipcard-2": "^0.3.2",
+    "react-flippy": "^0.1.5",
     "react-page-scroller": "^1.5.1",
     "react-router-dom": "^5.0.1",
     "react-scroll-parallax": "^2.1.2",
@@ -51,6 +54,7 @@
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "react-parallax-hover": "^1.0.4"
   }
 }
