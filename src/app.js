@@ -58,13 +58,11 @@ class App extends React.Component {
    window.removeEventListener("resize", this.updateHeight)
  }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate() {
     this.updateHeight()
     this.state.scroll > this.state.top ?
         document.body.style.paddingTop = `${this.state.height}px` :
         document.body.style.paddingTop = 0
-
-    console.log(this.refs.home.clientHeight, prevState.top)
   }
 
   updateHeight() {
