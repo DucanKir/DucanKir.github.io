@@ -127,13 +127,13 @@ class App extends React.Component {
           <nav id="nav" className={this.state.scroll > this.state.top ? "fixed-nav" : ""}>
             <ul>
               <a onClick={this.goToTop}
-                className={this.state.scroll < homeheight/3*2 ? "hoveredElement" : "navitem"} >Home</a>
+                className={`${this.state.scroll < homeheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`} >Home</a>
               <AnchorLink href="#about"
-                className={this.state.scroll > homeheight/3*2 && this.state.scroll < homeheight+aboutheight/3*2 ? "hoveredElement" : "navitem"}>About</AnchorLink>
+                className={`${this.state.scroll > homeheight/3*2 && this.state.scroll < homeheight+aboutheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>About</AnchorLink>
               <AnchorLink href="#portfolio"
-                className={this.state.scroll > homeheight+aboutheight/3*2 && this.state.scroll < homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"}>Portfolio</AnchorLink>
+                className={`${this.state.scroll > homeheight+aboutheight/3*2 && this.state.scroll < homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>Portfolio</AnchorLink>
               <AnchorLink href="#contact"
-                className={this.state.scroll > homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"}>Contact</AnchorLink>
+                className={`${this.state.scroll > homeheight+aboutheight+portfolioheight/3*2 ? "hoveredElement" : "navitem"} has-text-weight-bold`}>Contact</AnchorLink>
             </ul>
           </nav>
 
@@ -147,7 +147,7 @@ class App extends React.Component {
             </ScrollAnimation>
           </div>
           <div
-            className="about"
+            className="portfolio"
             style={{height: window.innerHeight}}
             id="portfolio"
             ref="portfolio">
@@ -158,7 +158,17 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="contact"
             ref="contact">
-            <h1 className="title is-2">LANA KIR</h1>
+            <form name="contact" netlify>
+              <p>
+                <label>Name <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Email <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
           </div>
         </div>
       )
