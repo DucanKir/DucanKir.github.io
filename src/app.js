@@ -96,8 +96,8 @@ class App extends React.Component {
   }
 
   flat_hex_to_pixel(q, r) {
-    var x = 60 * (3./2 * q)
-    var y = 60 * (Math.sqrt(3)/2 * q + Math.sqrt(3) * r)
+    var y = 52 * (3./2 * q)
+    var x = 52 * (Math.sqrt(3)/2 * q + Math.sqrt(3) * r)
     return [x, y]
   }
 
@@ -108,7 +108,7 @@ class App extends React.Component {
       let twoCoord = this.flat_hex_to_pixel(coord[i][0], coord[i][1])
       twoCoord.push(icons[i])
       twoCoord.push(delay)
-      delay+=100
+      delay+=50
       result.push(twoCoord)
 
     }
@@ -117,14 +117,14 @@ class App extends React.Component {
   }
 
   setTiles() {
-    const listOfIcons = ["devicon-javascript-plain  icond", "devicon-react-original  icond", "devicon-nodejs-plain  icond", "devicon-python-plain  icond", "devicon-django-plain  icond", "devicon-html5-plain  icond", "devicon-css3-plain  icond", "devicon-express-original  icond", "devicon-postgresql-plain  icond", "devicon-mongodb-plain  icond", "devicon-babel-plain  icond", "devicon-sass-original  icond", "devicon-git-plain  icond", "devicon-github-plain  icond", "devicon-photoshop-plain  icond", "devicon-illustrator-plain  icond", "devicon-webpack-plain  icond"]
+    const listOfIcons = ["devicon-javascript-plain  icond", "devicon-react-original  icond", "devicon-nodejs-plain  icond", "devicon-python-plain  icond", "devicon-django-plain  icond", "devicon-html5-plain  icond", "devicon-css3-plain  icond", "devicon-express-original  icond", "devicon-postgresql-plain  icond", "devicon-mongodb-plain  icond", "devicon-babel-plain  icond", "devicon-sass-original  icond", "devicon-git-plain  icond", "devicon-github-plain  icond", "devicon-photoshop-plain  icond", "devicon-illustrator-plain  icond", "devicon-webpack-plain  icond", "devicon-mocha-plain icond", "devicon-gimp-plain icond"]
 
     const listOfPCoordinates= [[0,0],[0,1],[0,2],[1,-1],[1,0],[1,1],[1,2],[2,-2],[2,-1],[2,0],[2,1],[2,2],[3,-2],[3,-1],[3,0],[3,1],[4,-2],[4,-1],[4,0]]
 
     const targetList = this.getCoordinatesWithIcons(listOfIcons, listOfPCoordinates)
 
     return (
-      <div style={{position: "relative"}}>
+      <div  className="section" style={{position: "relative"}}>
         {targetList.map(item =>
           <ScrollAnimation
             key={item[2]}
@@ -209,6 +209,7 @@ class App extends React.Component {
             <ScrollAnimation animateIn="flipInY" animateOnce={true}>
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
+            {this.setTiles()}
           </div>
 
           <div
@@ -216,7 +217,7 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="portfolio"
             ref="portfolio">
-            {this.setTiles()}
+
           </div>
 
           <div
