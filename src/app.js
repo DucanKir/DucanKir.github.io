@@ -265,6 +265,7 @@ class App extends React.Component {
               <div className="contact-text">
                 <h1 className="contact-header has-text-light">Contact</h1>
                 <p className="contact-paragraph has-text-light has-text-centered">If you have any questions, please contact me!</p>
+                <i className="fas fa-link"></i>
               </div>
               <br />
               <form name="contact" method="post" action="/">
