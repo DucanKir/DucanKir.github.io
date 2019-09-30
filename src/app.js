@@ -112,7 +112,6 @@ class App extends React.Component {
       result.push(twoCoord)
 
     }
-    console.log(result)
     return result
   }
 
@@ -218,28 +217,35 @@ class App extends React.Component {
             <div className="projects">
 
               <div className="columns  section">
-                <div  className="column">
+                <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
                     <img src="https://i.imgur.com/8JC1gYL.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
+                  <div  className="mobile-image">
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
+                      <img src="https://i.imgur.com/8JC1gYL.png" />
+                    </ScrollAnimation>
+                  </div>
                   <div className="">
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
-                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                      <h2 className="project-title title is-4"> Vanilla JavaScript Pac-Man</h2>
                     </ScrollAnimation>
                     <br />
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={400} duration={2}>
-                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p className="project-text is-family-secondary">Pac-Man is a maze arcade game, the player controls the character, as he must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing "Power Pellets" will cause the ghosts to reverse direction, allowing Pac-Man to eat them for bonus points.</p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={500} duration={2}>
                     <div className="links ">
-                      <div className="container">
-                        <i className="title is-3 fas fa-link"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://ducankir.github.io/pacman/" className="title is-3 fas fa-link"></a>
                       </div>
-                      <div className="container">
-                        <i className="title is-3 fab fa-github"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://github.com/DucanKir/pacman"className="title is-3 fab fa-github"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
@@ -249,26 +255,35 @@ class App extends React.Component {
               <div  className="columns section">
                 <div className="column section project-description">
                   <div className="">
+                    <div  className=" mobile-image">
+                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                        <img src="https://i.imgur.com/qVt4D0a.png" />
+                      </ScrollAnimation>
+                    </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
-                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                      <h2 className="project-title title is-4"> Board Games</h2>
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
-                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p className="project-text is-family-secondary">This website allows users to search for a board games, sort by categories, mechanics, price, number of players and more! </p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 2-days hackathon group project.  </p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Frddie Hoy</a></p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
-                      <div className="container">
-                        <i className="title is-3 fas fa-link"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://ducankir.github.io/project-2/#/"className="title is-3 fas fa-link"></a>
                       </div>
-                      <div className="container">
-                        <i className="title is-3 fab fa-github"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://github.com/DucanKir/project-2"className="title is-3 fab fa-github"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
                 </div>
-                <div  className="column">
+                <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
                     <img src="https://i.imgur.com/qVt4D0a.png" />
                   </ScrollAnimation>
@@ -276,28 +291,37 @@ class App extends React.Component {
               </div>
 
               <div  className="columns section">
-                <div  className="column">
+                <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
                     <img src="https://i.imgur.com/RplNXNn.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
                   <div className="">
+                    <div  className="mobile-image">
+                      <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                        <img src="https://i.imgur.com/RplNXNn.png" />
+                      </ScrollAnimation>
+                    </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
-                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                      <h2 className="project-title title is-4"> Happening</h2>
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
-                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p className="project-text is-family-secondary">Happening is a full-stack web application which allows users to find and attend events and people to attend them with.</p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days group project.  </p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Team:</span> Lana Kirilenko,<a className="team-link" href="https://github.com/Fearchar"> Fearchar MacLean</a>, <a className="team-link" href="https://github.com/acadonis"> Alexsis Adonis</a> and <a className="team-link" href="https://github.com/mtcolvard"> Matthew Colvard</a> </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
-                      <div className="container">
-                        <i className="title is-3 fas fa-link"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://happening-sei42.herokuapp.com/#/"className="title is-3 fas fa-link"></a>
                       </div>
-                      <div className="container">
-                        <i className="title is-3 fab fa-github"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://github.com/DucanKir/project-3-events-site"className="title is-3 fab fa-github"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
@@ -307,26 +331,33 @@ class App extends React.Component {
               <div  className="columns section">
                 <div className="column section project-description">
                   <div className="">
+                    <div  className="column mobile-image">
+                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                        <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                      </ScrollAnimation>
+                    </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
-                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                      <h2 className="project-title title is-4"> Video Games</h2>
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
-                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p className="project-text is-family-secondary"> This is a full-stack website for searching for video games, related games, sorting by gaming platform and genre. Each game has description, screenshots, video, links to stores and website.</p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
-                      <div className="container">
-                        <i className="title is-3 fas fa-link"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://project-4-videogames.herokuapp.com/#/"className="title is-3 fas fa-link"></a>
                       </div>
-                      <div className="container">
-                        <i className="title is-3 fab fa-github"></i>
+                      <div className="container has-text-centered">
+                        <a href="https://github.com/DucanKir/project-4-videogames"className="title is-3 fab fa-github"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
                 </div>
-                <div  className="column">
+                <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
                     <img src="https://i.imgur.com/jUrQE9J.jpg" />
                   </ScrollAnimation>
