@@ -142,11 +142,6 @@ class App extends React.Component {
   }
 
   render(){
-      const homeheight = this.state.homeHeight
-      const aboutheight = this.state.aboutHeight
-      const portfolioheight = this.state.portfolioHeight
-      const contactheight = this.state.contactHeight
-      const bodyheight = homeheight + aboutheight + portfolioheight + contactheight
 
       return (
         <div className="">
@@ -213,11 +208,52 @@ class App extends React.Component {
           </div>
 
           <div
-            className="portfolio"
-            style={{height: window.innerHeight}}
+            className="portfolio section"
             id="portfolio"
             ref="portfolio">
+            <h1   className="projects-header">Projects</h1>
+            <div className="projects">
 
+              <div className="columns">
+                <div  className="column">
+                  <img src="https://i.imgur.com/8JC1gYL.png" />
+                </div>
+                <div className="column section">
+                  <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                  <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+
+              <div  className="columns">
+                <div className="column section">
+                  <h2 className="title is-4"> Board Games</h2>
+                  <p  className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div  className="column">
+                  <img src="https://i.imgur.com/qVt4D0a.png" />
+                </div>
+              </div>
+
+              <div  className="columns">
+                <div  className="column">
+                  <img src="https://i.imgur.com/RplNXNn.png" />
+                </div>
+                <div className="column section">
+                  <h2 className="title is-4">Happening</h2>
+                  <p  className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+
+              <div  className="columns">
+                <div className="column section">
+                  <h2 className="title is-4">Video Games</h2>
+                  <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div  className="column">
+                  <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div
@@ -225,22 +261,41 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="contact"
             ref="contact">
-            <form name="contact" method="post" action="/">
-              <input type="hidden" name="form-name" value="contact" />
-              <div className="inputField">
-                <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
+            <div className="contact-form section">
+              <div className="contact-text">
+                <h1 className="contact-header has-text-light">Contact</h1>
+                <p className="contact-paragraph has-text-light has-text-centered">If you have any questions, please contact me!</p>
               </div>
-              <div className="inputField">
-                <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
+              <br />
+              <form name="contact" method="post" action="/">
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="inputField">
+                  <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
+                </div>
+                <div className="inputField">
+                  <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
+                </div>
+                <div className="inputField">
+                  <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
+                </div>
+                <div className="">
+                  <button className="button is-info send-button" type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+            <div className="has-text-centered arrow-up">
+              <AnchorLink href="#home" className="fas fa-chevron-up"></AnchorLink>
+            </div>
+            <div className="contact-icons">
+              <div className="contact-icons-container">
+                <a href="https://github.com/DucanKir" className="fab fa-github"></a>
+                <a href="https://www.linkedin.com/in/lana-kir/" className="fab fa-linkedin-in"></a>
+                <a href="https://www.facebook.com/ducan.kirilenko" className="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/ducankir/" className="fab fa-instagram"></a>
               </div>
-              <div className="inputField">
-                <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
-              </div>
-              <div className="">
-                <button className="button is-info" type="submit">Send</button>
-              </div>
-            </form>
+            </div>
           </div>
+
         </div>
       )
     }
