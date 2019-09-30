@@ -50,7 +50,10 @@ video {
 }
 
 .about {
-padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 }
 .portfolio {
@@ -67,6 +70,19 @@ padding-top: 150px;
 
 .projects-header {
   margin: 0  0 70px 0;
+  border-bottom: 3px solid black;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+  width: 100px;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .projects {
@@ -266,6 +282,8 @@ textarea {
 
 .contact-header {
   margin-top: 8%;
+  border-bottom: 3px solid white;
+  margin-bottom: 20px;
 }
 
 .contact-icons {

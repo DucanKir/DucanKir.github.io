@@ -201,6 +201,7 @@ class App extends React.Component {
             style={{height: window.innerHeight}}
             id="about"
             ref="about">
+            <h1 className="projects-header">About</h1>
             <ScrollAnimation animateIn="flipInY" animateOnce={true}>
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
@@ -211,46 +212,124 @@ class App extends React.Component {
             className="portfolio section"
             id="portfolio"
             ref="portfolio">
-            <h1   className="projects-header">Projects</h1>
+            <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
+              <h1   className="projects-header">Projects</h1>
+            </ScrollAnimation>
             <div className="projects">
 
-              <div className="columns">
+              <div className="columns  section">
                 <div  className="column">
-                  <img src="https://i.imgur.com/8JC1gYL.png" />
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
+                    <img src="https://i.imgur.com/8JC1gYL.png" />
+                  </ScrollAnimation>
                 </div>
-                <div className="column section">
-                  <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
-                  <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div className="column section project-description">
+                  <div className="">
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                    </ScrollAnimation>
+                    <br />
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={400} duration={2}>
+                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </ScrollAnimation>
+                  </div>
+                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={500} duration={2}>
+                    <div className="links ">
+                      <div className="container">
+                        <i className="title is-3 fas fa-link"></i>
+                      </div>
+                      <div className="container">
+                        <i className="title is-3 fab fa-github"></i>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
                 </div>
               </div>
 
-              <div  className="columns">
-                <div className="column section">
-                  <h2 className="title is-4"> Board Games</h2>
-                  <p  className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div  className="columns section">
+                <div className="column section project-description">
+                  <div className="">
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                    </ScrollAnimation>
+                    <br/>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </ScrollAnimation>
+                  </div>
+                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <div className="links ">
+                      <div className="container">
+                        <i className="title is-3 fas fa-link"></i>
+                      </div>
+                      <div className="container">
+                        <i className="title is-3 fab fa-github"></i>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
                 </div>
                 <div  className="column">
-                  <img src="https://i.imgur.com/qVt4D0a.png" />
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                    <img src="https://i.imgur.com/qVt4D0a.png" />
+                  </ScrollAnimation>
                 </div>
               </div>
 
-              <div  className="columns">
+              <div  className="columns section">
                 <div  className="column">
-                  <img src="https://i.imgur.com/RplNXNn.png" />
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                    <img src="https://i.imgur.com/RplNXNn.png" />
+                  </ScrollAnimation>
                 </div>
-                <div className="column section">
-                  <h2 className="title is-4">Happening</h2>
-                  <p  className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div className="column section project-description">
+                  <div className="">
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                    </ScrollAnimation>
+                    <br/>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </ScrollAnimation>
+                  </div>
+                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <div className="links ">
+                      <div className="container">
+                        <i className="title is-3 fas fa-link"></i>
+                      </div>
+                      <div className="container">
+                        <i className="title is-3 fab fa-github"></i>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
                 </div>
               </div>
 
-              <div  className="columns">
-                <div className="column section">
-                  <h2 className="title is-4">Video Games</h2>
-                  <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div  className="columns section">
+                <div className="column section project-description">
+                  <div className="">
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                      <h2 className="title is-4"> Vanilla JavaScript Pacman</h2>
+                    </ScrollAnimation>
+                    <br/>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <p className="is-family-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </ScrollAnimation>
+                  </div>
+                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <div className="links ">
+                      <div className="container">
+                        <i className="title is-3 fas fa-link"></i>
+                      </div>
+                      <div className="container">
+                        <i className="title is-3 fab fa-github"></i>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
                 </div>
                 <div  className="column">
-                  <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                    <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                  </ScrollAnimation>
                 </div>
               </div>
             </div>
@@ -263,30 +342,41 @@ class App extends React.Component {
             ref="contact">
             <div className="contact-form section">
               <div className="contact-text">
-                <h1 className="contact-header has-text-light">Contact</h1>
-                <p className="contact-paragraph has-text-light has-text-centered">If you have any questions, please contact me!</p>
-                <i className="fas fa-link"></i>
+                <ScrollAnimation animateIn="fadeInDown" duration={2} animateOnce={true}>
+                  <h1 className="contact-header has-text-light">Contact</h1>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeInUp"  animateOnce={true}>
+                  <p className="contact-paragraph has-text-light has-text-centered">If you have any questions, please contact me!</p>
+                </ScrollAnimation>
               </div>
               <br />
               <form name="contact" method="post" action="/">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="inputField">
-                  <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
+                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={200}>
+                    <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
+                  </ScrollAnimation>
                 </div>
                 <div className="inputField">
-                  <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
+                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={300}>
+                    <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
+                  </ScrollAnimation>
                 </div>
                 <div className="inputField">
-                  <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
+                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={400}>
+                    <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
+                  </ScrollAnimation>
                 </div>
                 <div className="">
-                  <button className="button is-info send-button" type="submit">Send</button>
+                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={500}>
+                    <button className="button is-info send-button" type="submit">Send</button>
+                  </ScrollAnimation>
                 </div>
               </form>
             </div>
-            <div className="has-text-centered arrow-up">
-              <AnchorLink href="#home" className="fas fa-chevron-up"></AnchorLink>
-            </div>
+              <div className="has-text-centered arrow-up">
+                <AnchorLink href="#home" className="fas fa-chevron-up"></AnchorLink>
+              </div>
             <div className="contact-icons">
               <div className="contact-icons-container">
                 <a href="https://github.com/DucanKir" className="fab fa-github"></a>
