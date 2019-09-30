@@ -212,7 +212,7 @@ class App extends React.Component {
             className="portfolio section"
             id="portfolio"
             ref="portfolio">
-            <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <h1   className="projects-header">Projects</h1>
             </ScrollAnimation>
             <div className="projects">
@@ -369,7 +369,7 @@ class App extends React.Component {
                 </div>
                 <div className="">
                   <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={500}>
-                    <button className="button is-info send-button" type="submit">Send</button>
+                    <button className="button is-info send-button is-outlined" type="submit">Send</button>
                   </ScrollAnimation>
                 </div>
               </form>
