@@ -201,6 +201,10 @@ class App extends React.Component {
             id="about"
             ref="about">
             <h1 className="projects-header">About</h1>
+            <p>Hi, my name is Lana, I am a junior full-stack developer and I'm in love with coding.</p>
+            <p>I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice.</p>
+            <p>I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
+            <p>And when I am not coding, I like to climb(bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin and learn how to create games with Unreal Engine 4</p>
             <ScrollAnimation animateIn="flipInY" animateOnce={true}>
               <h1 className="title is-2">LANA KIR</h1>
             </ScrollAnimation>
