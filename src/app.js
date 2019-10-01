@@ -108,7 +108,7 @@ class App extends React.Component {
       let twoCoord = this.flat_hex_to_pixel(coord[i][0], coord[i][1])
       twoCoord.push(icons[i])
       twoCoord.push(delay)
-      delay+=50
+      delay+=30
       result.push(twoCoord)
 
     }
@@ -157,25 +157,25 @@ class App extends React.Component {
             ref="home"
             id="home">
             <div className="">
-              <Animated animationIn="fadeIn" animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
+              <Animated animationIn="fadeIn" animationInDuration={2000} animationOut="fadeOut" isVisible={true}>
                 <h1 className="title  has-text-light header-text">Hello </h1>
               </Animated>
 
-              <Animated animationIn="fadeInUp" animationInDuration={3000} animationInDelay={1000} animationOut="fadeOut" isVisible={true}>
+              <Animated animationIn="fadeInUp" animationInDuration={1000} animationInDelay={500} animationOut="fadeOut" isVisible={true}>
               <h1 className="title has-text-dark header-text">
                 <span className="title has-text-light header-text has-text-weight-bold h1">I'm </span>
                 Lana Kirilenko
               </h1>
               </Animated>
 
-              <Animated animationIn="fadeInRight" animationOut="fadeOut" animationInDelay={2000} animationInDuration={3000} isVisible={true}>
+              <Animated animationIn="fadeInRight" animationOut="fadeOut" animationInDelay={1000} animationInDuration={2000} isVisible={true}>
                 <div className="has-text-light subtitle is-3 h3">
                 Full-stack web developer
                 </div>
               </Animated>
             </div>
             <div>
-              <Animated className="has-text-centered arrow" animationIn="fadeInUp" animationOut="fadeOut" animationInDelay={2500} animationInDuration={3000} isVisible={true} style={{top: window.innerHeight*0.75}}>
+              <Animated className="has-text-centered arrow" animationIn="fadeInUp" animationOut="fadeOut" animationInDelay={1000} animationInDuration={1500} isVisible={true} style={{top: window.innerHeight*0.75}}>
                 <AnchorLink href="#nav" className="fas fa-chevron-down"></AnchorLink>
               </Animated>
             </div>
@@ -241,22 +241,22 @@ class App extends React.Component {
 
               <div className="columns  section">
                 <div  className="column desktop-image">
-                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={1}>
                     <img src="https://i.imgur.com/8BBYutr.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
                   <div  className="mobile-image">
-                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={1}>
                       <img src="https://i.imgur.com/8BBYutr.png" />
                     </ScrollAnimation>
                   </div>
                   <div className="">
-                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={1}>
                       <h2 className="project-title title is-4"> Vanilla JavaScript Pac-Man</h2>
                     </ScrollAnimation>
                     <br />
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={400} duration={2}>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={400} duration={1}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | HTML5 | CSS3 | Git | Github | Google Fonts  </p>
                       <br />
                       <p className="project-text is-family-secondary">Pac-Man is a maze arcade game, the player controls the character, as he must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing "Power Pellets" will cause the ghosts to reverse direction, allowing Pac-Man to eat them for bonus points.</p>
@@ -264,7 +264,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={600} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={600} duration={1}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://ducankir.github.io/pacman/" className="title is-3 fas fa-link link"></a>
@@ -281,15 +281,15 @@ class App extends React.Component {
                 <div className="column section project-description">
                   <div className="">
                     <div  className=" mobile-image">
-                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={1}>
                         <img src="https://i.imgur.com/n1nhPKP.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={1}>
                       <h2 className="project-title title is-4"> "Bored" Games</h2>
                     </ScrollAnimation>
                     <br/>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={1}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | React | Webpack | HTML5 | CSS3 | SASS | Bulma | API |Babel | Git | Github | Google Fonts  </p>
                       <br />
                       <p className="project-text is-family-secondary">This platform allows users to search for board games, sort by categories, mechanics, price, number of players and more! </p>
@@ -299,7 +299,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Freddie Hoy</a></p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={1}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://ducankir.github.io/project-2/#/"className="title is-3 fas fa-link link"></a>
@@ -311,7 +311,7 @@ class App extends React.Component {
                   </ScrollAnimation>
                 </div>
                 <div  className="column desktop-image">
-                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={1}>
                     <img src="https://i.imgur.com/n1nhPKP.png" />
                   </ScrollAnimation>
                 </div>
@@ -319,22 +319,22 @@ class App extends React.Component {
 
               <div  className="columns section">
                 <div  className="column desktop-image">
-                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={1}>
                     <img src="https://i.imgur.com/Bnt57ov.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
                   <div className="">
                     <div  className="mobile-image">
-                      <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                      <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={1}>
                         <img src="https://i.imgur.com/Bnt57ov.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={1}>
                       <h2 className="project-title title is-4"> Happening</h2>
                     </ScrollAnimation>
                     <br/>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={1}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | React | Node.js | Express | JWT | MongoDB | Webpack | HTML5 | CSS3 | SASS | API | Babel | Git | Github | Google Fonts  </p>
                       <br />
                       <p className="project-text is-family-secondary">Happening is a full-stack web application which allows users to find and attend events and people to attend them with.</p>
@@ -346,7 +346,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">My role:</span> Homepage, created back end and front end for users (registration, login, profile), their interaction (following users) and adding events to user profile. </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={1}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://happening-sei42.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
@@ -363,15 +363,15 @@ class App extends React.Component {
                 <div className="column section project-description">
                   <div className="">
                     <div  className="column mobile-image">
-                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                      <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={1}>
                         <img src="https://i.imgur.com/dGPevOL.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={1}>
                       <h2 className="project-title title is-4"> Video Games</h2>
                     </ScrollAnimation>
                     <br/>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={1}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | Python | React | Django | SQLite | Webpack | HTML5 | CSS3 | SASS | Bulma | API | Babel | Git | Github | Google Fonts  </p>
                       <br />
                       <p className="project-text is-family-secondary"> This is a full-stack website to search for video games and related games, which are sorted by gaming platforms and genres.
@@ -380,7 +380,7 @@ Each game has a description, screenshots, a video, links to websites and to stor
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={1}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://project-4-videogames.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
@@ -392,7 +392,7 @@ Each game has a description, screenshots, a video, links to websites and to stor
                   </ScrollAnimation>
                 </div>
                 <div  className="column desktop-image">
-                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={1}>
                     <img src="https://i.imgur.com/dGPevOL.png" />
                   </ScrollAnimation>
                 </div>
@@ -407,7 +407,7 @@ Each game has a description, screenshots, a video, links to websites and to stor
             ref="contact">
             <div className="contact-form section">
               <div className="contact-text">
-                <ScrollAnimation animateIn="fadeInDown" duration={2} animateOnce={true}>
+                <ScrollAnimation animateIn="fadeInDown" duration={1} animateOnce={true}>
                   <h1 className="contact-header has-text-light">Contact</h1>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeInUp"  animateOnce={true}>
@@ -418,22 +418,22 @@ Each game has a description, screenshots, a video, links to websites and to stor
               <form name="contact" method="post" action="/">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="inputField">
-                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={200}>
+                  <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true} delay={200}>
                     <input className=" has-text-weight-bold input is-medium" type="text" name="name" placeholder="Name"/>
                   </ScrollAnimation>
                 </div>
                 <div className="inputField">
-                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={300}>
+                  <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true} delay={300}>
                     <input className=" has-text-weight-bold input is-medium" type="email" name="email" placeholder="Email"/>
                   </ScrollAnimation>
                 </div>
                 <div className="inputField">
-                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={400}>
+                  <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true} delay={400}>
                     <textarea className=" has-text-weight-bold textarea is-medium" name="message" placeholder="Your message"></textarea>
                   </ScrollAnimation>
                 </div>
                 <div className="">
-                  <ScrollAnimation animateIn="fadeInRight" duration={2} animateOnce={true} delay={500}>
+                  <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true} delay={500}>
                     <button className="button is-info send-button is-outlined" type="submit">Send</button>
                   </ScrollAnimation>
                 </div>
