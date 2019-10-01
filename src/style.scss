@@ -58,8 +58,36 @@ video {
 }
 
 .avatar {
-  width: 50%;
+  width: 20%;
+  border-radius: 100%;
+  border: 3px solid black;
+  margin-bottom: 30px;
 }
+
+.avatar-and-stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto !important;
+}
+
+.about-text {
+  width: 60%;
+  margin-bottom: 60px;
+}
+
+.statement {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tech-icons-with-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .portfolio {
   display: flex;
   justify-content: center;
@@ -73,7 +101,7 @@ video {
 }
 
 .projects-header {
-  margin: 0  0 70px 0;
+  margin: 0  0 50px 0;
   border-bottom: 3px solid black;
 }
 
@@ -185,6 +213,13 @@ nav {
   display: flex;
 }
 
+.tech-icons {
+  height: 420px;
+  width: 400px;
+  margin-left: 60px;
+
+}
+
 .icond {
   font-size: 50px;
   color: white;
@@ -192,8 +227,8 @@ nav {
 
 .iconContainer {
   margin: 5px;
-  background-image: url(https://i.imgur.com/ofRhysw.png);
-  background-size: 100%;
+  background-image: url(https://i.imgur.com/gYJh3Gy.png);
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: center;
   width: 100px;
@@ -482,5 +517,26 @@ form {
     font-size: 5em !important;
     margin: 15px;
   }
+
+  .about {
+    padding-top: 150px;
+  }
+
+   .portfolio {
+     padding-top: 150px;
+   }
+
+   .avatar {
+     width:90%;
+   }
+
+   .about-text {
+     width: 90%;
+   }
+
+   .tech-icons {
+     display: none;
+   }
+
 
 }

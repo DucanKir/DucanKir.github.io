@@ -38,6 +38,7 @@
     "react-flipcard": "^0.2.1",
     "react-flipcard-2": "^0.3.2",
     "react-flippy": "^0.1.5",
+    "react-hover": "^1.4.0",
     "react-page-scroller": "^1.5.1",
     "react-router-dom": "^5.0.1",
     "react-scroll-parallax": "^2.1.2",

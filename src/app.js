@@ -96,8 +96,8 @@ class App extends React.Component {
   }
 
   flat_hex_to_pixel(q, r) {
-    var y = 52 * (3./2 * q)
-    var x = 52 * (Math.sqrt(3)/2 * q + Math.sqrt(3) * r)
+    var x = 45 * (3./2 * q)
+    var y = 45 * (Math.sqrt(3)/2 * q + Math.sqrt(3) * r)
     return [x, y]
   }
 
@@ -123,7 +123,7 @@ class App extends React.Component {
     const targetList = this.getCoordinatesWithIcons(listOfIcons, listOfPCoordinates)
 
     return (
-      <div  className="section" style={{position: "relative"}}>
+      <div  className="section tech-icons" style={{position: "relative"}}>
         {targetList.map(item =>
           <ScrollAnimation
             key={item[2]}
@@ -131,9 +131,9 @@ class App extends React.Component {
             animateIn="flipInX"
             animateOnce={true}
             delay={+(item[3])}>
-          <div className="iconContainer">
-          <i className={item[2]}></i>
-          </div>
+              <div className="iconContainer">
+                <i className={item[2]}></i>
+              </div>
           </ScrollAnimation>
         )}
       </div>
@@ -196,23 +196,34 @@ class App extends React.Component {
           </nav>
 
           <div
-            className="about section container"
+            className="about section"
             id="about"
             ref="about">
-            <h1 className="projects-header">About</h1>
-            <div className="columns">
-              <div className="column">
-                <img className="avatar" src="https://i.imgur.com/sZxieeA.png"  />
-                <p className="project-text is-family-secondary">Hi, my name is Lana, I am a junior full-stack developer and I'm in love with coding.</p>
+              <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+                <h1 className="projects-header">About</h1>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={200}>
+                <p className="statement project-title title is-4">Hi, my name is Lana, I am a junior full-stack developer and I'm in love with coding.</p>
+              </ScrollAnimation>
+            <div className="">
+              <div className=" avatar-and-stat ">
+                <ScrollAnimation animateIn="fadeInDown" animateOnce={true} delay={500} className=" has-text-centered">
+                  <img className="avatar" src="https://i.imgur.com/sZxieeA.png"  />
+                </ScrollAnimation>
+                <div className="about-text">
+                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={200}>
+                    <p className="project-text is-family-secondary">&nbsp;&nbsp;&nbsp;I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice. I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
 
-                <p className="project-text is-family-secondary">I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice.</p>
-
-                <p className="project-text is-family-secondary">I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
-
-                <p className="project-text is-family-secondary">And when I am not coding, I like to climb(bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin, play video and board games and learn how to create games with Unreal Engine 4</p>
+                    <p className="project-text is-family-secondary">&nbsp;&nbsp;&nbsp;And when I am not coding, I like to climb (bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin, play video and board games and learn how to create games with Unreal Engine 4</p>
+                  </ScrollAnimation>
+                </div>
               </div>
-              <div className="column">
+              <div className=" tech-icons-with-list has-text-centered">
+                <p className="project-title title is-4">Languages and Technologies</p>
                 {this.setTiles()}
+                <p className="project-text is-family-secondary">Javascript | React | Python | Django | Express.js | Node.js</p>
+                <p className="project-text is-family-secondary">Webpack | Babel | Mocha | MongoDB | SQLite | PostgreSQL | HTML5 | CSS3 | SASS | Bulma | Git | Github</p>
+                <p className="project-text is-family-secondary">Phitoshop | Illustrator | Gimp </p>
               </div>
             </div>
 
