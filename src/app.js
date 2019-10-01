@@ -252,7 +252,7 @@ class App extends React.Component {
                     </ScrollAnimation>
                   </div>
                   <div className="">
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
                       <h2 className="project-title title is-4"> Vanilla JavaScript Pac-Man</h2>
                     </ScrollAnimation>
                     <br />
@@ -264,7 +264,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={500} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={600} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://ducankir.github.io/pacman/" className="title is-3 fas fa-link link"></a>
@@ -285,7 +285,7 @@ class App extends React.Component {
                         <img src="https://i.imgur.com/n1nhPKP.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
                       <h2 className="project-title title is-4"> "Bored" Games</h2>
                     </ScrollAnimation>
                     <br/>
@@ -299,7 +299,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Frddie Hoy</a></p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://ducankir.github.io/project-2/#/"className="title is-3 fas fa-link link"></a>
@@ -330,7 +330,7 @@ class App extends React.Component {
                         <img src="https://i.imgur.com/Bnt57ov.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
                       <h2 className="project-title title is-4"> Happening</h2>
                     </ScrollAnimation>
                     <br/>
@@ -346,7 +346,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">My role:</span> Created back end and front end for users (registration, login, profile), their interaction (following users) and adding events to user profile. Homepage. </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://happening-sei42.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
@@ -367,7 +367,7 @@ class App extends React.Component {
                         <img src="https://i.imgur.com/dGPevOL.png" />
                       </ScrollAnimation>
                     </div>
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
+                    <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
                       <h2 className="project-title title is-4"> Video Games</h2>
                     </ScrollAnimation>
                     <br/>
@@ -379,7 +379,7 @@ class App extends React.Component {
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
-                  <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                  <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
                         <a href="https://project-4-videogames.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
