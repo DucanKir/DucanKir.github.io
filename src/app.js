@@ -242,13 +242,13 @@ class App extends React.Component {
               <div className="columns  section">
                 <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
-                    <img src="https://i.imgur.com/8JC1gYL.png" />
+                    <img src="https://i.imgur.com/8BBYutr.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
                   <div  className="mobile-image">
                     <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
-                      <img src="https://i.imgur.com/8JC1gYL.png" />
+                      <img src="https://i.imgur.com/8BBYutr.png" />
                     </ScrollAnimation>
                   </div>
                   <div className="">
@@ -282,7 +282,7 @@ class App extends React.Component {
                   <div className="">
                     <div  className=" mobile-image">
                       <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
-                        <img src="https://i.imgur.com/qVt4D0a.png" />
+                        <img src="https://i.imgur.com/n1nhPKP.png" />
                       </ScrollAnimation>
                     </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
@@ -312,7 +312,7 @@ class App extends React.Component {
                 </div>
                 <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
-                    <img src="https://i.imgur.com/qVt4D0a.png" />
+                    <img src="https://i.imgur.com/n1nhPKP.png" />
                   </ScrollAnimation>
                 </div>
               </div>
@@ -320,14 +320,14 @@ class App extends React.Component {
               <div  className="columns section">
                 <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
-                    <img src="https://i.imgur.com/RplNXNn.png" />
+                    <img src="https://i.imgur.com/Bnt57ov.png" />
                   </ScrollAnimation>
                 </div>
                 <div className="column section project-description">
                   <div className="">
                     <div  className="mobile-image">
                       <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} duration={2}>
-                        <img src="https://i.imgur.com/RplNXNn.png" />
+                        <img src="https://i.imgur.com/Bnt57ov.png" />
                       </ScrollAnimation>
                     </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
@@ -364,7 +364,7 @@ class App extends React.Component {
                   <div className="">
                     <div  className="column mobile-image">
                       <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
-                        <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                        <img src="https://i.imgur.com/dGPevOL.png" />
                       </ScrollAnimation>
                     </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
@@ -392,7 +392,7 @@ class App extends React.Component {
                 </div>
                 <div  className="column desktop-image">
                   <ScrollAnimation animateIn="fadeInRight" animateOnce={true} duration={2}>
-                    <img src="https://i.imgur.com/jUrQE9J.jpg" />
+                    <img src="https://i.imgur.com/dGPevOL.png" />
                   </ScrollAnimation>
                 </div>
               </div>
