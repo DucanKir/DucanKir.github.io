@@ -196,19 +196,27 @@ class App extends React.Component {
           </nav>
 
           <div
-            className="about"
-            style={{height: window.innerHeight}}
+            className="about section container"
             id="about"
             ref="about">
             <h1 className="projects-header">About</h1>
-            <p>Hi, my name is Lana, I am a junior full-stack developer and I'm in love with coding.</p>
-            <p>I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice.</p>
-            <p>I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
-            <p>And when I am not coding, I like to climb(bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin and learn how to create games with Unreal Engine 4</p>
-            <ScrollAnimation animateIn="flipInY" animateOnce={true}>
-              <h1 className="title is-2">LANA KIR</h1>
-            </ScrollAnimation>
-            {this.setTiles()}
+            <div className="columns">
+              <div className="column">
+                <img className="avatar" src="https://i.imgur.com/sZxieeA.png"  />
+                <p className="project-text is-family-secondary">Hi, my name is Lana, I am a junior full-stack developer and I'm in love with coding.</p>
+
+                <p className="project-text is-family-secondary">I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice.</p>
+
+                <p className="project-text is-family-secondary">I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
+
+                <p className="project-text is-family-secondary">And when I am not coding, I like to climb(bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin, play video and board games and learn how to create games with Unreal Engine 4</p>
+              </div>
+              <div className="column">
+                {this.setTiles()}
+              </div>
+            </div>
+
+
           </div>
 
           <div
@@ -238,18 +246,20 @@ class App extends React.Component {
                     </ScrollAnimation>
                     <br />
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={400} duration={2}>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | HTML5 | CSS3 | Git | Github | Google Fonts  </p>
+                      <br />
                       <p className="project-text is-family-secondary">Pac-Man is a maze arcade game, the player controls the character, as he must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing "Power Pellets" will cause the ghosts to reverse direction, allowing Pac-Man to eat them for bonus points.</p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days solo project.  </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={500} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
-                        <a href="https://ducankir.github.io/pacman/" className="title is-3 fas fa-link"></a>
+                        <a href="https://ducankir.github.io/pacman/" className="title is-3 fas fa-link link"></a>
                       </div>
                       <div className="container has-text-centered">
-                        <a href="https://github.com/DucanKir/pacman"className="title is-3 fab fa-github"></a>
+                        <a href="https://github.com/DucanKir/pacman"className="title is-3 fab fa-github link"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
@@ -265,24 +275,26 @@ class App extends React.Component {
                       </ScrollAnimation>
                     </div>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} duration={2}>
-                      <h2 className="project-title title is-4"> Board Games</h2>
+                      <h2 className="project-title title is-4"> "Bored" Games</h2>
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
-                      <p className="project-text is-family-secondary">This website allows users to search for a board games, sort by categories, mechanics, price, number of players and more! </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | React | Webpack | HTML5 | CSS3 | SASS | Bulma | API |Babel | Git | Github | Google Fonts  </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 2-days hackathon group project.  </p>
+                      <p className="project-text is-family-secondary">This platform allows users to search for a board games, sort by categories, mechanics, price, number of players and more! </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Frddie Hoy</a></p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 2-days hackathon pair coding.  </p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Frddie Hoy</a></p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
-                        <a href="https://ducankir.github.io/project-2/#/"className="title is-3 fas fa-link"></a>
+                        <a href="https://ducankir.github.io/project-2/#/"className="title is-3 fas fa-link link"></a>
                       </div>
                       <div className="container has-text-centered">
-                        <a href="https://github.com/DucanKir/project-2"className="title is-3 fab fa-github"></a>
+                        <a href="https://github.com/DucanKir/project-2"className="title is-3 fab fa-github link"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
@@ -312,20 +324,24 @@ class App extends React.Component {
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | React | Node.js | Express | JWT | MongoDB | Webpack | HTML5 | CSS3 | SASS | API | Babel | Git | Github | Google Fonts  </p>
+                      <br />
                       <p className="project-text is-family-secondary">Happening is a full-stack web application which allows users to find and attend events and people to attend them with.</p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days group project.  </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days group project.  </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Team:</span> Lana Kirilenko,<a className="team-link" href="https://github.com/Fearchar"> Fearchar MacLean</a>, <a className="team-link" href="https://github.com/acadonis"> Alexsis Adonis</a> and <a className="team-link" href="https://github.com/mtcolvard"> Matthew Colvard</a> </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko,<a className="team-link" href="https://github.com/Fearchar"> Fearchar MacLean</a>, <a className="team-link" href="https://github.com/acadonis"> Alexsis Adonis</a> and <a className="team-link" href="https://github.com/mtcolvard"> Matthew Colvard</a> </p>
+                      <br />
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">My role:</span> Created back end and front end for users (registration, login, profile), their interaction (following users) and adding events to user profile. Homepage. </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
-                        <a href="https://happening-sei42.herokuapp.com/#/"className="title is-3 fas fa-link"></a>
+                        <a href="https://happening-sei42.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
                       </div>
                       <div className="container has-text-centered">
-                        <a href="https://github.com/DucanKir/project-3-events-site"className="title is-3 fab fa-github"></a>
+                        <a href="https://github.com/DucanKir/project-3-events-site"className="title is-3 fab fa-github link"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
@@ -345,18 +361,20 @@ class App extends React.Component {
                     </ScrollAnimation>
                     <br/>
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | Python | React | Django | SQLite | Webpack | HTML5 | CSS3 | SASS | Bulma | API | Babel | Git | Github | Google Fonts  </p>
+                      <br />
                       <p className="project-text is-family-secondary"> This is a full-stack website for searching for video games, related games, sorting by gaming platform and genre. Each game has description, screenshots, video, links to stores and website.</p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="title is-6">Type of project:</span> 7-days solo project.  </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                     <div className="links ">
                       <div className="container has-text-centered">
-                        <a href="https://project-4-videogames.herokuapp.com/#/"className="title is-3 fas fa-link"></a>
+                        <a href="https://project-4-videogames.herokuapp.com/#/"className="title is-3 fas fa-link link"></a>
                       </div>
                       <div className="container has-text-centered">
-                        <a href="https://github.com/DucanKir/project-4-videogames"className="title is-3 fab fa-github"></a>
+                        <a href="https://github.com/DucanKir/project-4-videogames"className="title is-3 fab fa-github link"></a>
                       </div>
                     </div>
                   </ScrollAnimation>
