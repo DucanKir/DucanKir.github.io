@@ -214,14 +214,14 @@ class App extends React.Component {
                   <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={200}>
                     <p className="project-text is-family-secondary">&nbsp;&nbsp;&nbsp;I started to learn JavaScript just a few months ago and now I am very proud of my progress and how much I've learned and put into practice. I find coding very exciting and want to work with people who share the same enthusiasm for this discipline! I really enjoy solving problems as it gives me great satisfaction when I manage to come up with a solution to a complicated issue.</p>
 
-                    <p className="project-text is-family-secondary">&nbsp;&nbsp;&nbsp;And when I am not coding, I like to climb (bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin, play video and board games and learn how to create games with Unreal Engine 4</p>
+                    <p className="project-text is-family-secondary">&nbsp;&nbsp;&nbsp;When I am not coding, I like to climb (bouldering), create things with Blender3D and print them with a 3D printer, make leather bags, use epoxy resin, play video and board games and learn how to create games with Unreal Engine 4.</p>
                   </ScrollAnimation>
                 </div>
               </div>
               <div className=" tech-icons-with-list has-text-centered">
                 <p className="project-title title is-4">Languages and Technologies</p>
                 {this.setTiles()}
-                <p className="project-text is-family-secondary">Javascript | React | Python | Django | Express.js | Node.js</p>
+                <p className="project-text is-family-secondary">JavaScript | React | Python | Django | Express.js | Node.js</p>
                 <p className="project-text is-family-secondary">Webpack | Babel | Mocha | MongoDB | SQLite | PostgreSQL | HTML5 | CSS3 | SASS | Bulma | Git | Github</p>
                 <p className="project-text is-family-secondary">Phitoshop | Illustrator | Gimp </p>
               </div>
@@ -292,11 +292,11 @@ class App extends React.Component {
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | React | Webpack | HTML5 | CSS3 | SASS | Bulma | API |Babel | Git | Github | Google Fonts  </p>
                       <br />
-                      <p className="project-text is-family-secondary">This platform allows users to search for a board games, sort by categories, mechanics, price, number of players and more! </p>
+                      <p className="project-text is-family-secondary">This platform allows users to search for board games, sort by categories, mechanics, price, number of players and more! </p>
                       <br />
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 2-days hackathon pair coding.  </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Frddie Hoy</a></p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko and <a className="team-link" href="https://www.linkedin.com/in/freddie-hoy/"> Freddie Hoy</a></p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={300} duration={2}>
@@ -341,9 +341,9 @@ class App extends React.Component {
                       <br />
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days group project.  </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko,<a className="team-link" href="https://github.com/Fearchar"> Fearchar MacLean</a>, <a className="team-link" href="https://github.com/acadonis"> Alexsis Adonis</a> and <a className="team-link" href="https://github.com/mtcolvard"> Matthew Colvard</a> </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Team:</span> Lana Kirilenko,<a className="team-link" href="https://github.com/Fearchar"> Fearchar MacLean</a>, <a className="team-link" href="https://github.com/acadonis"> Alexis Adonis</a> and <a className="team-link" href="https://github.com/mtcolvard"> Matthew Colvard</a> </p>
                       <br />
-                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">My role:</span> Created back end and front end for users (registration, login, profile), their interaction (following users) and adding events to user profile. Homepage. </p>
+                      <p className="project-text is-family-secondary"><span className="has-text-weight-bold">My role:</span> Homepage, created back end and front end for users (registration, login, profile), their interaction (following users) and adding events to user profile. </p>
                     </ScrollAnimation>
                   </div>
                   <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={300} duration={2}>
@@ -374,7 +374,8 @@ class App extends React.Component {
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={300} duration={2}>
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Languages and Technologies used:</span> JavaScript | Python | React | Django | SQLite | Webpack | HTML5 | CSS3 | SASS | Bulma | API | Babel | Git | Github | Google Fonts  </p>
                       <br />
-                      <p className="project-text is-family-secondary"> This is a full-stack website for searching for video games, related games, sorting by gaming platform and genre. Each game has description, screenshots, video, links to stores and website.</p>
+                      <p className="project-text is-family-secondary"> This is a full-stack website to search for video games and related games, which are sorted by gaming platforms and genres.
+Each game has a description, screenshots, a video, links to websites and to stores where you can purchase the games.</p>
                       <br />
                       <p className="project-text is-family-secondary"><span className="has-text-weight-bold">Type of project:</span> 7-days solo project.  </p>
                     </ScrollAnimation>
